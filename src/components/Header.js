@@ -15,9 +15,6 @@ const Header = () => {
         <NavLink to="/add" className="link" activeClassName="active">
           Add Book
         </NavLink>
-              <NavLink to="/register" className="link" activeClassName="active" exact>
-          Register
-        </NavLink>
       </div>
     </header>
   );
