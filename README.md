@@ -1,4 +1,6 @@
-An application built with React, React-Bootstrap, React-router-dom and useContext API.
+# An application built with React, React-Bootstrap, React-router-dom, SCSS and useContext API.
+
+Link to the project: [HERE](https://books-ms.netlify.app/).
 
 # Getting Started with Create React App
 
