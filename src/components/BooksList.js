@@ -10,21 +10,6 @@ const BooksList = () => {
   const [postsPerPage] = useState(4);
   const [term, setTerm] = useState('');
 
-  // input style
-  const INPUT={
-    border: '0',
-    borderRadius: '20px',
-    top: '30px',
-    height: '35px',
-    width: '60%',
-    textAlign: 'center',
-    padding: '0 33px',
-    display: 'block',
-    color: '#1a6fc4',
-    fontSize: '17px',
-    transition: 'top 0.1s ease-in-out',
-  };
-
     // Get current posts
     const indexOfLastPost = currentPage * postsPerPage;
     const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -41,11 +26,9 @@ const BooksList = () => {
 
   return (
     <React.Fragment>
-      <div style={{display: 'flex', justifyContent: 'center', margin:'40px'}}>
-      <input style={INPUT}  type="search" placeholder="Search for books" value={term} onChange={(e) => {
+      <input className='input-search'  type="search" placeholder="Search for books" value={term} onChange={(e) => {
               setTerm(e.target.value);
             }} />      
-        </div>
       <div  className="book-list">
         {!_.isEmpty(filteredBooks) ? (
           filteredBooks

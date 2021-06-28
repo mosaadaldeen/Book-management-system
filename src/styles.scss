@@ -166,45 +166,41 @@ button {
   margin-left: 10px;
 }
 
+.input-div{
+  margin: 0;
+}
+
 .input-search{
-  border: '0';
-  border-radius: '20px';
-  top: '30px';
-  height: '35px';
-  width: '60%';
-  text-align: 'center';
-  padding: '0 33px';
-  display: 'block';
-  color: '#1a6fc4';
-  font-size: '17px';
-  transition: 'top 0.1s ease-in-out';
-}
-
-.register{
-  font-size: 24px;
+  border: 0;
+  display: block;
+  border-radius: 20px;
+  margin: 50px auto;
+  width: 70%;
   text-align: center;
-  margin: 30px;
+  padding: 8px 33px;
+  color: #1a6fc4;
+  font-size: 17px;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
   h1 {
     font-size: 30px;
   }
-
   header {
     .links {
       a {
         font-size: 1.2rem;
       }
-
       .link:link,
       .link:visited {
         margin: unset;
       }
     }
   }
-
   .main-form {
+    width: 100%;
+  }
+  .input-search{
     width: 100%;
   }
 }

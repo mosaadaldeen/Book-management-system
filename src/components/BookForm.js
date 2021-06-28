@@ -25,6 +25,8 @@ const BookForm = (props) => {
     const values = [bookname, author, price, quantity, image, tags];
     let errorMsg = '';
 
+    const showWithTags = tags.split(',').map(tag=>`#${tag} `);
+
     const allFieldsFilled = values.every((field) => {
       const value = `${field}`.trim();
       return value !== '' && value !== '0';
@@ -39,7 +41,7 @@ const BookForm = (props) => {
         quantity,
         image,
         date: new Date(),
-        tags
+        tags: showWithTags
       };
       props.handleOnSubmit(book);
     } else {
@@ -47,8 +49,6 @@ const BookForm = (props) => {
     }
     setErrorMsg(errorMsg);
   };
-
-  // console.log(tags.split('  ').join('# '));
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
